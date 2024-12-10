@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="612,2462.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="624,3738.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -43,6 +43,9 @@
       <x:String>UiPath.Mail</x:String>
       <x:String>UiPath.Mail.SMTP.Activities</x:String>
       <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -111,7 +114,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="545.6,2397.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="592,3673.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProductName" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
@@ -122,7 +125,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
@@ -170,18 +173,18 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="483.2,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Input a product" Title="Input a product">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="529.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Input a product" Title="Input a product">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[ProductName]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Amazon.com. Spend less. Smile more." sap:VirtualizedContainerService.HintSize="483.2,1222.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="04742b31-8424-4539-8261-e4d94fcde8a7" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Amazon.com. Spend less. Smile more." sap:VirtualizedContainerService.HintSize="529.6,1220.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="04742b31-8424-4539-8261-e4d94fcde8a7" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1005.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1004" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -206,7 +209,7 @@
               </uix:NExtractData.Target>
             </uix:NExtractData>
             <ui:OutputDataTable Text="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="387.2,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" />
-            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[ProductName]" WorkbookPath="AmazonExcelList.xlsx" />
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[ExtractDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="BlankSheet" WorkbookPath="AmazonExcelList.xlsx" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -214,7 +217,24 @@
         <uix:TargetApp Area="243, 233, 1635, 1036" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" InformativeScreenshot="652bc6c8156b2674b62b80b6c6e3eb74.jpg" Selector="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" Title="Amazon.com. Spend less. Smile more." Url="https://www.amazon.com/ref=nav_logo" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,520.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="AmazonExcelList.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,251.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:RenameSheetX DisplayName="Rename Sheet" From="[Excel.Sheet(&quot;BlankSheet&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="[ProductName]" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="529.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
@@ -254,18 +274,36 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="483.2,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Input your email" Title="Input your email">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="529.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Input your email" Title="Input your email">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[UserEmail]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Attached is an excel file of detailed listings for aything &quot; + ProductName]" DisplayName="Send SMTP Mail Message" Email="uipathmailman@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="483.2,148.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="irfw hdmu mhpc snng" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[&quot;Here is what we found for &quot; + ProductName]" To="[UserEmail]">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Attached is an excel file of detailed listings for aything &quot; + ProductName]" DisplayName="Send SMTP Mail Message" Email="uipathmailman@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="529.6,148.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Password="irfw hdmu mhpc snng" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[&quot;Here is what we found for &quot; + ProductName]" To="[UserEmail]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">C:\Users\Josh Yao\OneDrive\Documents\UiPath\finals\AmazonExcelList.xlsx</InArgument>
         </scg:List>
       </ui:SendMail.Files>
     </ui:SendMail>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="483.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Mail sent! Please check your spam folder if it does not appear.&quot;]" />
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,676.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="AmazonExcelList.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,407.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="ClearRangeX_1" TargetRange="[Excel.Sheet(ProductName)]" />
+            <ueab:RenameSheetX DisplayName="Rename Sheet" From="[Excel.Sheet(ProductName)]" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="RenameSheetX_2" To="BlankSheet" />
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="529.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Mail sent! Please check your spam folder if it does not appear.&quot;]" />
   </Sequence>
 </Activity>
